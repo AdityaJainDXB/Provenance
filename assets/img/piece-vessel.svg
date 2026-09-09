@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img">
+<defs>
+  <radialGradient id="vig" cx="42%" cy="34%" r="80%">
+    <stop offset="0%" stop-color="#efeae0"/>
+    <stop offset="70%" stop-color="#efeae0"/>
+    <stop offset="100%" stop-color="#e2dbc8"/>
+  </radialGradient>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.045 0"/>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#2a2114" flood-opacity="0.20"/>
+  </filter>
+  <filter id="soft2" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2a2114" flood-opacity="0.16"/>
+  </filter>
+</defs>
+<rect width="800" height="1000" fill="url(#vig)"/><g opacity="0.5">
+  <polygon points="0,0 400.0,0 224.00000000000003,1000 0,620.0" fill="#fffdf5" opacity="0.55"/>
+</g><ellipse cx="400" cy="812" rx="210" ry="34" fill="#2a2114" opacity="0.12"/><g filter="url(#soft)">
+  <path d="M300 360 Q400 300 500 360 Q548 470 540 620 Q536 748 400 780 Q264 748 260 620 Q252 470 300 360 Z" fill="#7c6a53"/>
+  <path d="M300 360 Q400 300 500 360 Q520 400 512 430 Q400 360 288 430 Q280 400 300 360 Z" fill="#8b7960"/>
+  <ellipse cx="400" cy="352" rx="104" ry="30" fill="#5f503d"/>
+  <ellipse cx="400" cy="350" rx="82" ry="21" fill="#4a3d2e"/>
+  <path d="M338 250 Q400 214 462 250 L470 300 Q400 270 330 300 Z" fill="#7c6a53"/>
+  <ellipse cx="400" cy="248" rx="66" ry="16" fill="#5f503d"/>
+</g>
+<g opacity="0.28" stroke="#4a3d2e" stroke-width="2" fill="none">
+  <path d="M276 520 Q400 556 524 520"/>
+  <path d="M272 580 Q400 620 528 580"/>
+  <path d="M286 650 Q400 688 514 650"/>
+</g>
+<path d="M330 380 Q360 520 348 720" stroke="#9b8a70" stroke-width="26" fill="none" opacity="0.35" stroke-linecap="round"/><rect width="100%" height="100%" fill="transparent" filter="url(#grain)"/></svg>

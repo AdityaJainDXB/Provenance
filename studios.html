@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AURA Studios — Provenance</title>
+<meta name="description" content="AURA Studios — a full-screen vertical feed of 15–60 second process films. Craft technique only, ambient studio audio, and no view counts, likes, comments or followers.">
+<meta name="theme-color" content="#14110c">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..520;1,9..144,300..460&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="studios">
+<a class="skip-link" href="#feed">Skip to the feed</a>
+
+<div class="studio-bar">
+  <a class="studio-brand" href="index.html">AURA Studios <span class="tiny">PROVENANCE</span></a>
+  <button class="audio-toggle" aria-pressed="true" aria-label="Toggle ambient studio audio">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="label">Ambient studio audio</span>
+  </button>
+  <a class="exit" href="gallery.html">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    Exit to gallery
+  </a>
+</div>
+
+<main id="feed">
+  <div class="reel-track" tabindex="0" aria-label="Studio films — scroll or use the arrow keys"></div>
+</main>
+
+<nav class="reel-dots" aria-label="Film position"></nav>
+
+<div class="reel-filter" role="group" aria-label="Filter the feed by format">
+  <button data-reel-filter="all" aria-pressed="true">All films</button>
+  <button data-reel-filter="clip" aria-pressed="false">Process clips</button>
+  <button data-reel-filter="live" aria-pressed="false">Live studio</button>
+  <button data-reel-filter="backed" aria-pressed="false">Video-backed</button>
+</div>
+
+<noscript>
+  <div style="padding:6rem 1.5rem;text-align:center;color:#f4f1e9">
+    <h1 style="font-family:Fraunces,serif">AURA Studios needs JavaScript</h1>
+    <p style="color:rgba(244,241,233,.6)">The vertical feed is interactive. You can still browse everything in <a href="gallery.html" style="color:#f4f1e9">the gallery</a>.</p>
+  </div>
+</noscript>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/studios.js" defer></script>
+</body>
+</html>

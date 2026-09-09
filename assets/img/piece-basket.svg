@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img">
+<defs>
+  <radialGradient id="vig" cx="42%" cy="34%" r="80%">
+    <stop offset="0%" stop-color="#efeae0"/>
+    <stop offset="70%" stop-color="#efeae0"/>
+    <stop offset="100%" stop-color="#e2dbc8"/>
+  </radialGradient>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="21" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.045 0"/>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#2a2114" flood-opacity="0.20"/>
+  </filter>
+  <filter id="soft2" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2a2114" flood-opacity="0.16"/>
+  </filter>
+</defs>
+<rect width="800" height="1000" fill="url(#vig)"/><g opacity="0.5">
+  <polygon points="0,0 400.0,0 224.00000000000003,1000 0,620.0" fill="#fffdf5" opacity="0.55"/>
+</g><ellipse cx="400" cy="820" rx="220" ry="34" fill="#2a2114" opacity="0.12"/><g filter="url(#soft)"><path d="M250 470 Q400 400 550 470 Q560 640 520 760 Q400 830 280 760 Q240 640 250 470 Z" fill="#c2a878"/><path d="M250 470 Q400 454 550 470" stroke="#cbb488" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M253 496 Q400 480 547 496" stroke="#b79a6a" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M256 522 Q400 506 544 522" stroke="#cbb488" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M259 548 Q400 532 541 548" stroke="#b79a6a" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M262 574 Q400 558 538 574" stroke="#cbb488" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M265 600 Q400 584 535 600" stroke="#b79a6a" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M268 626 Q400 610 532 626" stroke="#cbb488" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M271 652 Q400 636 529 652" stroke="#b79a6a" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M274 678 Q400 662 526 678" stroke="#cbb488" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M277 704 Q400 688 523 704" stroke="#b79a6a" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M280 730 Q400 714 520 730" stroke="#cbb488" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M283 756 Q400 740 517 756" stroke="#b79a6a" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M286 782 Q400 766 514 782" stroke="#cbb488" stroke-width="15" fill="none" stroke-linecap="round"/><ellipse cx="400" cy="468" rx="150" ry="40" fill="#a98f60"/><ellipse cx="400" cy="466" rx="120" ry="30" fill="#8f7a55"/><path d="M300 560 l16 22 l-16 22 l-16 -22 Z" fill="#5b4a33" opacity="0.7"/><path d="M340 560 l16 22 l-16 22 l-16 -22 Z" fill="#5b4a33" opacity="0.7"/><path d="M380 560 l16 22 l-16 22 l-16 -22 Z" fill="#5b4a33" opacity="0.7"/><path d="M420 560 l16 22 l-16 22 l-16 -22 Z" fill="#5b4a33" opacity="0.7"/><path d="M460 560 l16 22 l-16 22 l-16 -22 Z" fill="#5b4a33" opacity="0.7"/><path d="M500 560 l16 22 l-16 22 l-16 -22 Z" fill="#5b4a33" opacity="0.7"/></g><rect width="100%" height="100%" fill="transparent" filter="url(#grain)"/></svg>

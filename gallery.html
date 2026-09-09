@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gallery — Provenance</title>
+<meta name="description" content="Every piece on offer at Provenance — paginated, never endless. Each carries a maker's card and a quiet set of verification markers.">
+<meta name="theme-color" content="#f4f1e9">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..520;1,9..144,300..460&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" data-open="false" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="mark">PROVENANCE</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="artisan.html">Artisans</a>
+        <a href="studios.html">Studios</a>
+        <a href="formats.html">Formats</a>
+        <a href="verification.html">Verification</a>
+        <a href="about.html">About</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:1.1rem">
+        <a class="nav-bag" href="gallery.html" aria-label="Your acquisitions"><span class="bag-label">Acquisitions</span> <span class="count">0</span></a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-intro">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Provenance</a> <span>/</span> <span>Gallery</span></div>
+      <span class="eyebrow">The full hang</span>
+      <h1 class="display">The gallery</h1>
+      <p class="lede">Everything currently on offer. Turn pages the way you would in a catalogue raisonné — deliberately, a few pieces at a time. There is no feed here to fall into.</p>
+    </div>
+  </section>
+
+  <div class="wrap" data-gallery-top></div>
+
+  <section class="section" style="padding-top:clamp(24px,4vw,40px)">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:clamp(24px,4vw,40px)">
+        <div class="filters" data-filters aria-label="Filter by craft">
+          <button class="chip" data-filter="all" aria-pressed="true">All craft</button>
+          <button class="chip" data-filter="ceramics" aria-pressed="false">Ceramics</button>
+          <button class="chip" data-filter="textiles" aria-pressed="false">Textiles</button>
+          <button class="chip" data-filter="basketry" aria-pressed="false">Basketry</button>
+          <button class="chip" data-filter="woodwork" aria-pressed="false">Woodwork</button>
+          <button class="chip" data-filter="metal" aria-pressed="false">Metal</button>
+          <button class="chip" data-filter="lacquer" aria-pressed="false">Lacquer</button>
+        </div>
+        <p class="muted" style="font-size:.9rem"><span data-count>—</span> · shown six to a page</p>
+      </div>
+
+      <div class="piece-grid" data-pieces data-paginate data-per-page="6"></div>
+      <nav class="pager" data-pager aria-label="Gallery pages"></nav>
+
+      <p class="center serif-note" style="margin-top:clamp(48px,8vw,80px)">
+        Every card above leads to a maker, a place, and a record of how the piece was made.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand">Provenance</span>
+        <p>A curated marketplace for verified, authentic handmade cultural goods — built so that real artisans, established and new, are seen and paid fairly.</p>
+      </div>
+      <div>
+        <h5>Browse</h5>
+        <ul>
+          <li><a href="gallery.html">The gallery</a></li>
+          <li><a href="artisan.html">Artisan profiles</a></li>
+          <li><a href="studios.html">AURA Studios (feed)</a></li>
+          <li><a href="index.html#exhibit">This week's selection</a></li>
+          <li><a href="index.html">Newly discovered</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>The platform</h5>
+        <ul>
+          <li><a href="verification.html">Verification markers</a></li>
+          <li><a href="verification.html#recommendation">Recommendation cap</a></li>
+          <li><a href="verification.html#ratings">Rating system</a></li>
+          <li><a href="formats.html">Selling formats</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Craft</h5>
+        <ul>
+          <li><a href="gallery.html">Ceramics</a></li>
+          <li><a href="gallery.html">Textiles &amp; rugs</a></li>
+          <li><a href="gallery.html">Basketry</a></li>
+          <li><a href="gallery.html">Woodwork &amp; metal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span data-year>2026</span> Provenance. A curated marketplace.</span>
+      <span>Verified origin · Fair visibility · No infinite scroll</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
