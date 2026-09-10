@@ -75,9 +75,9 @@ The upload/delete policies for these were already installed by
 
 ### Redirect URLs
 *Authentication → URL Configuration*:
-- **Site URL**: `https://<your-user>.github.io/provenance/`
+- **Site URL**: `https://<your-user>.github.io/Provenance/`
 - **Redirect URLs**: add
-  `https://<your-user>.github.io/provenance/auth.html`
+  `https://<your-user>.github.io/Provenance/auth.html`
   (and `http://localhost:8000/auth.html` for local testing).
 
 ## 5. Studio access code

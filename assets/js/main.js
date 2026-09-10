@@ -295,23 +295,34 @@
     return String(name || "•").split(/\s+/).map(function (w) { return w[0] || ""; }).slice(0, 2).join("").toUpperCase();
   }
 
-  function paint(session) {
-    var existing = rightWrap.querySelector(".nav-account");
-    if (existing) existing.remove();
-    var a = document.createElement("a");
+  function fill(a, session) {
     a.className = "nav-account";
     if (!session) {
       a.href = "auth.html";
-      a.textContent = "Sign in";
+      a.className += " nav-account--cta";
+      a.textContent = "Log in";
     } else if (session.role === "admin") {
       a.href = "admin.html";
-      a.className += " is-admin";
+      a.className += " nav-account--user is-admin";
       a.innerHTML = '<span class="avatar">' + initials(session.user.name) + "</span> Studio";
     } else {
       a.href = "feed.html";
+      a.className += " nav-account--user";
       a.innerHTML = '<span class="avatar">' + initials(session.user.name) + "</span> Your feed";
     }
-    rightWrap.insertBefore(a, toggle || null);
+  }
+
+  function paint(session) {
+    // top-bar button
+    var barBtn = rightWrap.querySelector(".nav-account");
+    if (!barBtn) { barBtn = document.createElement("a"); rightWrap.insertBefore(barBtn, toggle || null); }
+    fill(barBtn, session);
+    // mirrored link inside the mobile drawer
+    if (linksWrap) {
+      var drawer = linksWrap.querySelector(".nav-account");
+      if (!drawer) { drawer = document.createElement("a"); linksWrap.appendChild(drawer); }
+      fill(drawer, session);
+    }
   }
 
   B.ready().then(function () { return B.getSession(); }).then(paint).catch(function () { paint(null); });

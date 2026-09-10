@@ -1315,25 +1315,51 @@ em { font-style: italic; }
   display: inline-flex;
   align-items: center;
   gap: .5em;
-  font-size: .82rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   white-space: nowrap;
-  padding: .34rem .7rem;
-  border: 1px solid var(--line-strong);
+  padding: .6rem 1.1rem;
   border-radius: 999px;
-  transition: border-color .3s var(--ease), background-color .3s var(--ease);
+  transition: transform .3s var(--ease), background-color .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease);
 }
-.nav-account:hover { border-color: var(--ink); }
+/* signed-out: a solid, unmissable call to action */
+.nav-account--cta {
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+.nav-account--cta:hover { transform: translateY(-1px); background: var(--clay); border-color: var(--clay); }
+/* signed-in: quieter, outlined, with an avatar */
+.nav-account--user {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  padding: .34rem .7rem .34rem .4rem;
+}
+.nav-account--user:hover { border-color: var(--ink); }
+.nav-account--user.is-admin { border-color: var(--sage); }
 .nav-account .avatar {
-  width: 1.4rem; height: 1.4rem; border-radius: 50%;
+  width: 1.5rem; height: 1.5rem; border-radius: 50%;
   background: var(--clay); color: var(--paper);
   display: inline-grid; place-items: center;
-  font-size: .68rem; font-weight: 700; overflow: hidden;
+  font-size: .66rem; font-weight: 700; overflow: hidden; letter-spacing: 0;
 }
 .nav-account .avatar img { width: 100%; height: 100%; object-fit: cover; }
-.nav-account.is-admin { border-color: var(--sage); }
+
+/* the same link, shown inside the mobile drawer */
+.nav-links .nav-account {
+  margin-top: .8rem;
+}
+@media (max-width: 860px) {
+  /* keep the CTA visible in the top bar on mobile too, just tighter */
+  .nav-account--cta { padding: .5rem .85rem; font-size: .68rem; letter-spacing: 0.06em; }
+}
 
 /* ---------- Centred form shell (auth + onboarding) ---------- */
 .form-shell {

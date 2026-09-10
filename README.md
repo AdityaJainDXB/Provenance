@@ -7,7 +7,7 @@ culture" imitations that flood the market and undercut real artisans.
 Every product is tied to a verified artisan and their story. Established and new
 makers are both given fair visibility by design.
 
-🔗 **Live site:** https://adityajaindxb.github.io/provenance/
+🔗 **Live site:** https://adityajaindxb.github.io/Provenance/
 
 ---
 
