@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your taste — Provenance</title>
+<meta name="description" content="Tell Provenance which crafts, aesthetics and regions you're drawn to, so your feed leads with work you'll want to see.">
+<meta name="theme-color" content="#f4f1e9">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..520;1,9..144,300..460&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#quiz-main">Skip to content</a>
+
+<div class="form-shell">
+  <div class="form-top">
+    <a class="brand" href="index.html"><span class="mark">PROVENANCE</span></a>
+  </div>
+
+  <main class="form-main" id="quiz-main">
+    <div class="auth-card quiz-card">
+      <div class="quiz-progress" aria-hidden="true">
+        <i class="is-done"></i><i></i><i></i>
+      </div>
+
+      <form id="quiz" novalidate>
+        <!-- Step 1 -->
+        <fieldset class="quiz-step" data-step="0">
+          <span class="eyebrow">Step 1 of 3</span>
+          <h1>Which crafts pull you in?</h1>
+          <p class="sub">Pick as many as you like. You can change these any time from your account.</p>
+          <div class="choice-grid" data-group="crafts">
+            <label class="choice"><input type="checkbox" value="ceramics"><span class="tick"></span>Ceramics</label>
+            <label class="choice"><input type="checkbox" value="textiles"><span class="tick"></span>Textiles</label>
+            <label class="choice"><input type="checkbox" value="basketry"><span class="tick"></span>Basketry</label>
+            <label class="choice"><input type="checkbox" value="woodwork"><span class="tick"></span>Woodwork</label>
+            <label class="choice"><input type="checkbox" value="metal"><span class="tick"></span>Metal &amp; silver</label>
+            <label class="choice"><input type="checkbox" value="lacquer"><span class="tick"></span>Lacquer</label>
+            <label class="choice"><input type="checkbox" value="glass"><span class="tick"></span>Glass</label>
+            <label class="choice"><input type="checkbox" value="leather"><span class="tick"></span>Leather</label>
+            <label class="choice"><input type="checkbox" value="stone"><span class="tick"></span>Stone &amp; carving</label>
+          </div>
+        </fieldset>
+
+        <!-- Step 2 -->
+        <fieldset class="quiz-step" data-step="1" hidden>
+          <span class="eyebrow">Step 2 of 3</span>
+          <h1>What look speaks to you?</h1>
+          <p class="sub">The mood you want your feed to lean toward.</p>
+          <div class="choice-grid" data-group="aesthetics">
+            <label class="choice"><input type="checkbox" value="minimal"><span class="tick"></span>Minimal</label>
+            <label class="choice"><input type="checkbox" value="ornate"><span class="tick"></span>Ornate</label>
+            <label class="choice"><input type="checkbox" value="rustic"><span class="tick"></span>Rustic</label>
+            <label class="choice"><input type="checkbox" value="refined"><span class="tick"></span>Refined</label>
+            <label class="choice"><input type="checkbox" value="earthy"><span class="tick"></span>Earthy</label>
+            <label class="choice"><input type="checkbox" value="sculptural"><span class="tick"></span>Sculptural</label>
+            <label class="choice"><input type="checkbox" value="functional"><span class="tick"></span>Functional</label>
+            <label class="choice"><input type="checkbox" value="process-led"><span class="tick"></span>Process-led</label>
+            <label class="choice"><input type="checkbox" value="storied"><span class="tick"></span>Storied</label>
+          </div>
+          <div class="field" style="margin-top:1.6rem">
+            <label>Pace of the films you enjoy</label>
+            <div class="choice-grid" data-group="pace" data-single="true" style="grid-template-columns:repeat(2,1fr)">
+              <label class="choice"><input type="radio" name="pace" value="calm" checked><span class="tick"></span>Calm &amp; slow</label>
+              <label class="choice"><input type="radio" name="pace" value="energetic"><span class="tick"></span>Energetic</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Step 3 -->
+        <fieldset class="quiz-step" data-step="2" hidden>
+          <span class="eyebrow">Step 3 of 3</span>
+          <h1>Any regions you follow closely?</h1>
+          <p class="sub">Optional. We use this to surface makers from places you care about.</p>
+          <div class="choice-grid" data-group="regions">
+            <label class="choice"><input type="checkbox" value="south asia"><span class="tick"></span>South Asia</label>
+            <label class="choice"><input type="checkbox" value="east asia"><span class="tick"></span>East Asia</label>
+            <label class="choice"><input type="checkbox" value="southeast asia"><span class="tick"></span>Southeast Asia</label>
+            <label class="choice"><input type="checkbox" value="west africa"><span class="tick"></span>West Africa</label>
+            <label class="choice"><input type="checkbox" value="east africa"><span class="tick"></span>East Africa</label>
+            <label class="choice"><input type="checkbox" value="andes"><span class="tick"></span>The Andes</label>
+            <label class="choice"><input type="checkbox" value="middle east"><span class="tick"></span>Middle East</label>
+            <label class="choice"><input type="checkbox" value="europe"><span class="tick"></span>Europe</label>
+            <label class="choice"><input type="checkbox" value="oceania"><span class="tick"></span>Oceania</label>
+          </div>
+          <div class="field" style="margin-top:1.6rem">
+            <label for="price-max">A comfortable ceiling per piece <span class="hint" style="font-weight:400">(optional, £)</span></label>
+            <input type="number" id="price-max" min="0" step="10" inputmode="numeric" placeholder="e.g. 400">
+          </div>
+        </fieldset>
+
+        <p class="field-error" data-quiz-error></p>
+
+        <div class="quiz-actions">
+          <button type="button" class="text-btn" data-back hidden>Back</button>
+          <button type="button" class="text-btn" data-skip>Skip for now</button>
+          <button type="button" class="btn" data-next>Continue</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div class="form-foot">Your feed adapts as you watch — this is just the starting point.</div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/idb-store.js" defer></script>
+<script src="assets/js/rank.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/onboarding.js" defer></script>
+</body>
+</html>

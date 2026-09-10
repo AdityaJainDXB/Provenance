@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio — Provenance</title>
+<meta name="description" content="Provenance Studio — publish short maker films to the Shorts feed and manage what's live.">
+<meta name="theme-color" content="#f4f1e9">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..520;1,9..144,300..460&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin">
+<a class="skip-link" href="#studio-main">Skip to content</a>
+
+<div class="admin-shell">
+  <header class="admin-head">
+    <a class="brand" href="index.html"><span class="mark">PROVENANCE</span> Studio</a>
+    <div class="who">
+      <span class="badge">Studio</span>
+      <span data-who-name>—</span>
+      <a class="link" href="feed.html" style="border:none">View feed</a>
+      <button class="text-btn" data-signout type="button">Sign out</button>
+    </div>
+  </header>
+
+  <main class="admin-main" id="studio-main">
+    <!-- Upload -->
+    <section class="panel" aria-labelledby="publish-title">
+      <h2 id="publish-title">Publish a film</h2>
+      <p class="sub">15–60 seconds of technique. It enters the ranked feed for collectors whose taste it matches.</p>
+
+      <form id="upload-form" novalidate>
+        <div class="dropzone" data-dropzone tabindex="0" role="button" aria-label="Choose a video file">
+          <strong data-dz-title>Drop a video here, or choose a file</strong>
+          <span data-dz-hint>MP4 or WebM · up to ~200 MB</span>
+          <input type="file" accept="video/*" hidden data-file>
+          <div data-dz-preview hidden></div>
+        </div>
+
+        <div class="field" style="margin-top:1.2rem">
+          <label for="f-maker">Maker</label>
+          <input type="text" id="f-maker" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="f-title">Piece title</label>
+          <input type="text" id="f-title" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="f-technique">Technique</label>
+          <input type="text" id="f-technique" placeholder="e.g. Wheel-thrown, wood-fired" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="f-region">Region</label>
+          <input type="text" id="f-region" placeholder="e.g. Kutch, India" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="f-price">Price</label>
+          <input type="text" id="f-price" placeholder="e.g. £480" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="f-craft">Craft</label>
+          <select id="f-craft">
+            <option value="ceramics">Ceramics</option>
+            <option value="textiles">Textiles</option>
+            <option value="basketry">Basketry</option>
+            <option value="woodwork">Woodwork</option>
+            <option value="metal">Metal &amp; silver</option>
+            <option value="lacquer">Lacquer</option>
+            <option value="glass">Glass</option>
+            <option value="leather">Leather</option>
+            <option value="stone">Stone &amp; carving</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-tags-input">Style tags <span class="hint" style="font-weight:400">(press Enter to add — e.g. minimal, earthy, process-led)</span></label>
+          <div class="chip-input" data-chips>
+            <input type="text" id="f-tags-input" autocomplete="off" placeholder="Add a tag">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-status">Visibility</label>
+          <select id="f-status">
+            <option value="published">Publish to the feed now</option>
+            <option value="draft">Save as draft</option>
+          </select>
+        </div>
+
+        <p class="field-error" data-upload-error></p>
+        <div class="progress-bar" data-progress><i></i></div>
+
+        <button class="btn btn--block" data-submit type="submit" style="margin-top:1.2rem">Publish film</button>
+      </form>
+    </section>
+
+    <!-- Library -->
+    <section class="panel" aria-labelledby="library-title">
+      <h2 id="library-title">Films</h2>
+      <p class="sub" data-library-sub>Everything published or drafted to the feed.</p>
+      <div class="admin-list" data-list>
+        <div class="admin-empty">Loading…</div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<div class="modal-scrim" data-confirm-scrim>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <h3 id="confirm-title">Remove this film?</h3>
+    <p data-confirm-body>This takes it out of the feed for everyone. It can't be undone.</p>
+    <div class="modal-actions">
+      <button class="btn btn--ghost" data-confirm-cancel type="button">Keep it</button>
+      <button class="btn btn--danger" data-confirm-ok type="button">Remove</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/idb-store.js" defer></script>
+<script src="assets/js/rank.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/admin.js" defer></script>
+</body>
+</html>

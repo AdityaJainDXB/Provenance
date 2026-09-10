@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Provenance</title>
+<meta name="description" content="Sign in or create a Provenance account with Apple or Google. Makers with studio access enter through the same door.">
+<meta name="theme-color" content="#f4f1e9">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..520;1,9..144,300..460&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#auth-main">Skip to content</a>
+
+<div class="form-shell">
+  <div class="form-top">
+    <a class="brand" href="index.html"><span class="mark">PROVENANCE</span></a>
+  </div>
+
+  <main class="form-main" id="auth-main">
+    <div class="auth-card" role="form" aria-labelledby="auth-title">
+      <span class="eyebrow">Provenance</span>
+      <h1 id="auth-title">Sign in or create an account</h1>
+      <p class="sub">One door for everyone. Collectors go to their feed; makers with studio access go to the upload studio.</p>
+
+      <div class="field" data-demo-only hidden>
+        <label for="demo-name">Display name <span class="hint" style="font-weight:400">(demo mode)</span></label>
+        <input type="text" id="demo-name" autocomplete="name" placeholder="e.g. Ren Ishikawa">
+      </div>
+
+      <button class="oauth-btn oauth-btn--apple" data-provider="apple" type="button">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.36 12.9c.03 3.16 2.77 4.21 2.8 4.22-.02.07-.44 1.5-1.45 2.98-.87 1.28-1.78 2.55-3.21 2.58-1.4.03-1.86-.83-3.46-.83-1.6 0-2.11.8-3.44.86-1.38.05-2.43-1.38-3.31-2.66-1.8-2.6-3.18-7.34-1.33-10.55.92-1.6 2.56-2.6 4.34-2.63 1.36-.03 2.64.91 3.46.91.82 0 2.38-1.13 4.01-.96.68.03 2.6.27 3.83 2.07-.1.06-2.29 1.34-2.26 3.99M13.9 4.32c.73-.88 1.22-2.1 1.09-3.32-1.05.04-2.32.7-3.07 1.58-.67.78-1.26 2.02-1.1 3.21 1.17.09 2.36-.6 3.09-1.47"/></svg>
+        <span>Continue with Apple</span>
+      </button>
+      <button class="oauth-btn oauth-btn--google" data-provider="google" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.27c0-.82-.07-1.6-.2-2.36H12v4.47h6.45a5.52 5.52 0 0 1-2.4 3.62v3h3.88c2.27-2.1 3.57-5.18 3.57-8.73z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.95-2.9l-3.88-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.28v3.09A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.28a12 12 0 0 0 0 10.76z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.6 4.6 1.8l3.44-3.44A11.98 11.98 0 0 0 12 0 12 12 0 0 0 1.28 6.62l3.99 3.09C6.22 6.86 8.87 4.75 12 4.75z"/></svg>
+        <span>Continue with Google</span>
+      </button>
+
+      <p class="field-error" data-consumer-error></p>
+
+      <details class="admin-disclosure">
+        <summary>I have studio access</summary>
+        <div class="disclosure-body">
+          <p class="sub" style="margin-bottom:1.1rem">Studio access is for verified makers and curators. Sign in with the Google account on file, then enter your access code.</p>
+          <button class="oauth-btn oauth-btn--google" data-provider="google" data-intent="admin" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.27c0-.82-.07-1.6-.2-2.36H12v4.47h6.45a5.52 5.52 0 0 1-2.4 3.62v3h3.88c2.27-2.1 3.57-5.18 3.57-8.73z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.95-2.9l-3.88-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.28v3.09A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.28a12 12 0 0 0 0 10.76z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.6 4.6 1.8l3.44-3.44A11.98 11.98 0 0 0 12 0 12 12 0 0 0 1.28 6.62l3.99 3.09C6.22 6.86 8.87 4.75 12 4.75z"/></svg>
+            <span>Continue with Google (studio)</span>
+          </button>
+          <div class="field" data-admin-step hidden style="margin-top:1rem">
+            <label for="admin-code">Studio access code</label>
+            <input type="text" id="admin-code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="XXXXXX-XXXXXX">
+            <p class="field-error" data-admin-error></p>
+            <button class="btn btn--block" data-admin-submit type="button" style="margin-top:.9rem">Enter the studio</button>
+          </div>
+        </div>
+      </details>
+
+      <div class="form-note" data-demo-only hidden>
+        <strong>Demo mode.</strong> No server is connected, so sign-in is simulated and your uploads stay in this browser. Add your Supabase keys in <code>assets/js/config.js</code> to switch on real Apple / Google sign-in and cloud video storage — see <code>supabase/README.md</code>. Studio access code for the demo: <strong data-demo-code>PROVENANCE-STUDIO</strong>.
+      </div>
+    </div>
+  </main>
+
+  <div class="form-foot">
+    <a class="link" href="gallery.html" style="border:none">Keep browsing without an account</a>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/idb-store.js" defer></script>
+<script src="assets/js/rank.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/auth.js" defer></script>
+</body>
+</html>

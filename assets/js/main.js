@@ -267,3 +267,53 @@
     y.textContent = String(new Date().getFullYear());
   });
 })();
+
+/* =====================================================================
+   PROVENANCE — account state in the nav
+   Adds a "Shorts" link and a sign-in / account pill to every page that
+   carries the standard header. Depends on assets/js/backend.js.
+   ===================================================================== */
+(function () {
+  "use strict";
+
+  var linksWrap = document.querySelector(".nav-links");
+  var rightWrap = document.querySelector(".nav .nav-toggle") ? document.querySelector(".nav .nav-toggle").parentNode : null;
+  if (linksWrap && !linksWrap.querySelector('a[href="feed.html"]')) {
+    var studios = linksWrap.querySelector('a[href="studios.html"]');
+    var shorts = document.createElement("a");
+    shorts.href = "feed.html";
+    shorts.textContent = "Shorts";
+    if (studios && studios.nextSibling) linksWrap.insertBefore(shorts, studios.nextSibling);
+    else linksWrap.appendChild(shorts);
+  }
+
+  var B = window.ProvenanceBackend;
+  if (!B || !rightWrap) return;
+  var toggle = rightWrap.querySelector(".nav-toggle");
+
+  function initials(name) {
+    return String(name || "•").split(/\s+/).map(function (w) { return w[0] || ""; }).slice(0, 2).join("").toUpperCase();
+  }
+
+  function paint(session) {
+    var existing = rightWrap.querySelector(".nav-account");
+    if (existing) existing.remove();
+    var a = document.createElement("a");
+    a.className = "nav-account";
+    if (!session) {
+      a.href = "auth.html";
+      a.textContent = "Sign in";
+    } else if (session.role === "admin") {
+      a.href = "admin.html";
+      a.className += " is-admin";
+      a.innerHTML = '<span class="avatar">' + initials(session.user.name) + "</span> Studio";
+    } else {
+      a.href = "feed.html";
+      a.innerHTML = '<span class="avatar">' + initials(session.user.name) + "</span> Your feed";
+    }
+    rightWrap.insertBefore(a, toggle || null);
+  }
+
+  B.ready().then(function () { return B.getSession(); }).then(paint).catch(function () { paint(null); });
+  B.onAuthChange(function (session) { paint(session); });
+})();

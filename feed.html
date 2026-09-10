@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shorts — Provenance</title>
+<meta name="description" content="Provenance Shorts — a vertical feed of short maker films, ordered around the crafts, looks and regions you told us you care about.">
+<meta name="theme-color" content="#14110c">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..520;1,9..144,300..460&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="shorts">
+<a class="skip-link" href="#shorts-feed">Skip to the feed</a>
+
+<div class="shorts-bar">
+  <a class="shorts-brand" href="index.html">Provenance <span class="tiny">SHORTS</span></a>
+  <a class="exit" href="gallery.html">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    Exit
+  </a>
+</div>
+
+<main id="shorts-feed">
+  <div class="shorts-track" tabindex="0" aria-label="Maker films — scroll or use the arrow keys">
+    <div class="short-loading" data-boot>
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Building your feed…</p>
+    </div>
+  </div>
+</main>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<noscript>
+  <div style="padding:6rem 1.5rem;text-align:center;color:#f4f1e9">
+    <h1 style="font-family:Fraunces,serif">Provenance Shorts needs JavaScript</h1>
+    <p style="color:rgba(244,241,233,.6)">The feed is interactive. You can still browse everything in <a href="gallery.html" style="color:#f4f1e9">the gallery</a>.</p>
+  </div>
+</noscript>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/idb-store.js" defer></script>
+<script src="assets/js/rank.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/feed.js" defer></script>
+</body>
+</html>
